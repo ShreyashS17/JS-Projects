@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+
+      // Function to take in player choice and the computer's choice and return the result 
+      function playround(playerChoice, computerChoice){
+          let pc = playerChoice;
+          let cc = computerChoice;
+          let messageP = " Player Wins ! Computer Loses !! ";
+          let messageC = " Computer Wins ! Player Loses !! ";
+          if(pc == " rock " && cc == " scissors "){
+              alert(messageP)
+          }
+          else if( pc == " paper " && cc == " rock "){
+              alert(messageP)
+          }
+          else if( pc == " scissors " && cc == " paper "){
+            alert(messageP)
+          }
+          else{
+              alert(messageC)
+          }
+      }
+      
+      // function for the comp to make a choice
+      function computerPlay(){
+          let options = [ " rock ", " paper ", " scissors "]
+          return options[( Math.ceil(Math.random()*3))]        
+      }
+      
+      playerChoice = " rock "
+      computerChoice = computerPlay()
+      alert(computerChoice)
+      playround(playerChoice,computerChoice)
+
+
+
+
+  
+  </script>
+</body>
+</html>
